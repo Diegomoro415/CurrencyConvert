@@ -158,3 +158,7 @@ while True:
         result = cr.get_rate(currency_from, currency_to, amount)
         # Get the exchange rate between currencies
         exchange_rate = cr.get_rate(currency_from, currency_to)
+        # Format the output
+        symbol_from = cc.get_symbol(currency_from)
+        symbol_to = cc.get_symbol(currency_to)
+        result = round(result, 2)
