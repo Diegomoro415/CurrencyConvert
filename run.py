@@ -94,3 +94,5 @@ while True:
         except Exception:
             print(
                 "\033[31m Input not valid!.  Choose a valid value :(\33[0;0m")
+
+                
