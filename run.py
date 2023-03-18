@@ -95,4 +95,54 @@ while True:
             print(
                 "\033[31m Input not valid!.  Choose a valid value :(\33[0;0m")
 
-                
+        # Select a currency to exchage value
+        label('SELECT THE CONVERSION CURRENCY')
+        currency_to = None
+        while currency_to not in (1, 2, 3, 4, 5, 6, 7, 8, 9, 0):
+            top_currencies()
+            try:
+                currency_to = int(input("Select a currency:  "))
+                if currency_to == 1:
+                    currency_to = 'USD'
+                    print("cod chosen:", currency_to)
+                    break
+                elif currency_to == 2:
+                    currency_to = 'EUR'
+                    print("cod chosen:", currency_to)
+                    break
+                elif currency_to == 3:
+                    currency_to = 'GBP'
+                    print("cod chosen:", currency_to)
+                    break
+                elif currency_to == 4:
+                    currency_to = 'JPY'
+                    print("cod chosen:", currency_to)
+                    break
+                elif currency_to == 5:
+                    currency_to = 'CNY'
+                    print("cod chosen:", currency_to)
+                    break
+                elif currency_to == 6:
+                    currency_to = 'AUD'
+                    print("cod chosen:", currency_to)
+                    break
+                elif currency_to == 7:
+                    currency_to = 'HKD'
+                    print("cod chosen:", currency_to)
+                    break
+                elif currency_to == 8:
+                    currency_to = 'CAD'
+                    print("cod chosen:", currency_to)
+                    break
+                elif currency_to == 9:
+                    currency_to = 'BTC'
+                    print("cod chosen:", currency_to)
+                    break
+                elif currency_to == 0:
+                    currency_to = input(
+                        '\nOthers, insert currency code: (3 digits):').upper()
+                    print('Currency Code :', currency_to)
+                    break
+            except Exception:
+                print(
+                    "\033[31m Input not valid!. Try again :(\33[0;0m")
