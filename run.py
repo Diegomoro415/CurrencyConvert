@@ -151,3 +151,10 @@ while True:
                     print('Invalid input. The available currencies are: ')
                     print(currencies)
                     continue
+        
+        # Conversion
+        label('CONVERTING...')
+        # Get the exchange rate between currencies
+        result = cr.get_rate(currency_from, currency_to, amount)
+        # Get the exchange rate between currencies
+        exchange_rate = cr.get_rate(currency_from, currency_to)
