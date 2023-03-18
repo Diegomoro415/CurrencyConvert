@@ -146,3 +146,8 @@ while True:
             except Exception:
                 print(
                     "\033[31m Input not valid!. Try again :(\33[0;0m")
+                # Check if user choose currencies are available
+                if currency_from or currency_to not in currencies:
+                    print('Invalid input. The available currencies are: ')
+                    print(currencies)
+                    continue
