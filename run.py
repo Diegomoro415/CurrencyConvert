@@ -1,3 +1,21 @@
+"""A currency conversion program that allows the user to
+convert between different currencies.
+
+This program uses the forex_python library to perform currency conversions.
+It allows the user to input a desired amount to be converted, the initial
+currency and the exchange currency. It provides a list of available
+currencies to choose from and displays the converted amount.
+
+Author: Diego Moro
+
+Requirements:
+    forex_python==1.6
+
+Usage:
+    Run the script in a Python environment,
+    and follow the prompts to convert currencies.
+
+"""
 # Import Library
 from forex_python.converter import CurrencyRates, CurrencyCodes
 
@@ -21,11 +39,17 @@ currencies = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD',
 
 
 def top_currencies():
+    """
+    Displays the top currencies available for conversion.
+    """
     print('\033[32m\n1-USD\n2-EUR\n3-GBP\n4-JPY\n5-CNY\n6-AUD\n7-HKD\n8-CAD\n'
           '9-BTC\n0-Others:\n\33[0;0m')
 
 
 def label(txt):
+    """
+    Displays a formatted text label.
+    """
     print('-'*len(txt))
     print('\033[34m'+txt+'\033[0;0m')
     print('-'*len(txt))
@@ -53,39 +77,39 @@ while True:
             currency_from = int(input("Select a currency:  "))
             if currency_from == 1:
                 currency_from = 'USD'
-                print("cod chosen:", currency_from)
+                print("code chosen:", currency_from)
                 break
             elif currency_from == 2:
                 currency_from = 'EUR'
-                print("cod chosen:", currency_from)
+                print("code chosen:", currency_from)
                 break
             elif currency_from == 3:
                 currency_from = 'GBP'
-                print("cod chosen:", currency_from)
+                print("code chosen:", currency_from)
                 break
             elif currency_from == 4:
                 currency_from = 'JPY'
-                print("cod chosen:", currency_from)
+                print("code chosen:", currency_from)
                 break
             elif currency_from == 5:
                 currency_from = 'CNY'
-                print("cod chosen:", currency_from)
+                print("code chosen:", currency_from)
                 break
             elif currency_from == 6:
                 currency_from = 'AUD'
-                print("cod chosen:", currency_from)
+                print("code chosen:", currency_from)
                 break
             elif currency_from == 7:
                 currency_from = 'HKD'
-                print("cod chosen:", currency_from)
+                print("code chosen:", currency_from)
                 break
             elif currency_from == 8:
                 currency_from = 'CAD'
-                print("cod chosen:", currency_from)
+                print("code chosen:", currency_from)
                 break
             elif currency_from == 9:
                 currency_from = 'BTC'
-                print("cod chosen:", currency_from)
+                print("code chosen:", currency_from)
                 break
             elif currency_from == 0:
                 currency_from = input(
@@ -104,39 +128,39 @@ while True:
                 currency_to = int(input("Select a currency:  "))
                 if currency_to == 1:
                     currency_to = 'USD'
-                    print("cod chosen:", currency_to)
+                    print("code chosen:", currency_to)
                     break
                 elif currency_to == 2:
                     currency_to = 'EUR'
-                    print("cod chosen:", currency_to)
+                    print("code chosen:", currency_to)
                     break
                 elif currency_to == 3:
                     currency_to = 'GBP'
-                    print("cod chosen:", currency_to)
+                    print("code chosen:", currency_to)
                     break
                 elif currency_to == 4:
                     currency_to = 'JPY'
-                    print("cod chosen:", currency_to)
+                    print("code chosen:", currency_to)
                     break
                 elif currency_to == 5:
                     currency_to = 'CNY'
-                    print("cod chosen:", currency_to)
+                    print("code chosen:", currency_to)
                     break
                 elif currency_to == 6:
                     currency_to = 'AUD'
-                    print("cod chosen:", currency_to)
+                    print("code chosen:", currency_to)
                     break
                 elif currency_to == 7:
                     currency_to = 'HKD'
-                    print("cod chosen:", currency_to)
+                    print("code chosen:", currency_to)
                     break
                 elif currency_to == 8:
                     currency_to = 'CAD'
-                    print("cod chosen:", currency_to)
+                    print("code chosen:", currency_to)
                     break
                 elif currency_to == 9:
                     currency_to = 'BTC'
-                    print("cod chosen:", currency_to)
+                    print("code chosen:", currency_to)
                     break
                 elif currency_to == 0:
                     currency_to = input(
