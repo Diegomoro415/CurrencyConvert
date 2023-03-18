@@ -151,7 +151,6 @@ while True:
                     print('Invalid input. The available currencies are: ')
                     print(currencies)
                     continue
-        
         # Conversion
         label('CONVERTING...')
         # Get the exchange rate between currencies
@@ -162,3 +161,11 @@ while True:
         symbol_from = cc.get_symbol(currency_from)
         symbol_to = cc.get_symbol(currency_to)
         result = round(result, 2)
+        print(f'{currency_from}  -  {symbol_from} {amount} '
+              f' =========================== '
+              f' {currency_to}  -  {symbol_to} { result} '
+              f' Exchange rate: {exchange_rate:.4f})')
+        # Ask if user wants to perform another conversion
+        answer = input('Do you wish to perform another time? (Y/N): ').upper
+        if answer == 'N':
+            break
