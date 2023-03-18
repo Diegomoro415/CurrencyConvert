@@ -37,3 +37,60 @@ while True:
     label('1- INSERT THE DESIRED VALUE TO EXCHANGE\n 2- \
  INSERT THE INITIAL CURRENCY\n 3- INSERT THE EXCHANGE CURRENCY')
     label('INSERT A VALUE')
+    # Request user's input
+    while True:
+        try:
+            amount = float(input('ENTER DESIRED AMOUNT TO BE CONVERTED:\n'))
+            break
+        except ValueError:
+            print("\033[31m Input not valid!.  Insert a valid value\33[0;0m")
+    # Insert intial currency
+    label('PLEASE, SELECT THE INITIAL CURRENCY')
+    currency_from = None
+    while currency_from not in (1, 2, 3, 4, 5, 6, 7, 8, 9, 0):
+        top_currencies()
+        try:
+            currency_from = int(input("Select a currency:  "))
+            if currency_from == 1:
+                currency_from = 'USD'
+                print("cod chosen:", currency_from)
+                break
+            elif currency_from == 2:
+                currency_from = 'EUR'
+                print("cod chosen:", currency_from)
+                break
+            elif currency_from == 3:
+                currency_from = 'GBP'
+                print("cod chosen:", currency_from)
+                break
+            elif currency_from == 4:
+                currency_from = 'JPY'
+                print("cod chosen:", currency_from)
+                break
+            elif currency_from == 5:
+                currency_from = 'CNY'
+                print("cod chosen:", currency_from)
+                break
+            elif currency_from == 6:
+                currency_from = 'AUD'
+                print("cod chosen:", currency_from)
+                break
+            elif currency_from == 7:
+                currency_from = 'HKD'
+                print("cod chosen:", currency_from)
+                break
+            elif currency_from == 8:
+                currency_from = 'CAD'
+                print("cod chosen:", currency_from)
+                break
+            elif currency_from == 9:
+                currency_from = 'BTC'
+                print("cod chosen:", currency_from)
+                break
+            elif currency_from == 0:
+                currency_from = input(
+                    '\nOthers, insert the currency code: (3 digits):').upper()
+                print('Currency Code :', currency_from)
+        except Exception:
+            print(
+                "\033[31m Input not valid!.  Choose a valid value :(\33[0;0m")
