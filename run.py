@@ -23,3 +23,17 @@ currencies = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD',
 def top_currencies():
     print('\033[32m\n1-USD\n2-EUR\n3-GBP\n4-JPY\n5-CNY\n6-AUD\n7-HKD\n8-CAD\n'
           '9-BTC\n0-Others:\n\33[0;0m')
+
+
+def label(txt):
+    print('-'*len(txt))
+    print('\033[34m'+txt+'\033[0;0m')
+    print('-'*len(txt))
+
+
+while True:
+    # Instructions
+    label('CURRENCY CONVERT')
+    label('1- INSERT THE DESIRED VALUE TO EXCHANGE\n 2- \
+ INSERT THE INITIAL CURRENCY\n 3- INSERT THE EXCHANGE CURRENCY')
+    label('INSERT A VALUE')
