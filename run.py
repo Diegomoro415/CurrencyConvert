@@ -18,7 +18,10 @@ Usage:
 # Import Library
 from forex_python.converter import CurrencyRates, CurrencyCodes
 import forex_python
+import datetime
 
+# Set the date
+date = datetime.date.today()
 # Create instance of CurrencyRates class
 cr = CurrencyRates()
 
@@ -185,13 +188,15 @@ INSERT THE INITIAL CURRENCY\n3- INSERT THE EXCHANGE CURRENCY')
         # Get the exchange rate between currencies
         converted_amount = result * amount
         print(f'{currency_from}  -  {symbol_from} {amount} '
-              f' =========================== '
+              f' ===== '
               f' {currency_to}  -  {symbol_to} { result} '
               f' Exchange rate: {converted_amount:.4f})')
     except forex_python.converter.RatesNotAvailableError:
         print("\033[33m Conversion rates not\
  available for the selected currencies.\33[0;0m")
     # Ask if user wants to perform another conversion
-    answer = input('Do you wish to perform another time? (Y/N): ').upper
+    answer = input(
+                '\033[33m Wish to perform another time? (Y/N):\33[0;0m '
+                ).upper
     if answer == 'N':
         break
