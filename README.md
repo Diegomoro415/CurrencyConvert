@@ -255,3 +255,33 @@ The testing approach is as follows:
 <img src="images/testing/testing_input2.png">
 <img src="images/testing/testing_input3.png">
 </details>
+
+6. I want users to easily select options from the menu
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Top Currencies | List of top popular currencies | easy fast access  | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="images/testing/testing_topcurrencies.png">
+</details>
+
+7. I want users to see and follow the instruction for a easy navigation
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| instruction | Follow the steps | For easy and fast understaanding  | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="images/testing/testing_instructions.png">
+</details>
+
+8. I want the user to receive a real time result
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Result | Follow instrction set an amount, initial currency and currency to exchange | it gives a real time result  | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="images/testing/testing_result.png">
+</details>
