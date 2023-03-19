@@ -77,15 +77,13 @@ For those who wants to follow the prices find the best time to buy or sell your 
 2. I want to be able to see the instructions
 3. I want to have access to diffetent currencies
 4. I want to receive a real time quotation
-5. I want to have a clear result
 
 ### Site Owner
 
-6. I want users to have a positive experience
-7. I want users to easily select options from the menu
-8. I want users to see and follow the instruction for a easy navigation
-9. I want the user to receive a real time result
-10. I want to provide access to user to the top currencies in the world
+5. I want users to have a positive experience
+6. I want users to easily select options from the menu
+7. I want users to see and follow the instruction for a easy navigation
+8. I want the user to receive a real time result
 
                     ## Technical Design
 
@@ -119,3 +117,141 @@ For those who wants to follow the prices find the best time to buy or sell your 
 
 [Back to Table Of Contents](#table-of-contents)
 
+## Features
+
+### Informantions
+
+- Provides user the steps to follow
+- Gives a fast and easy navagation to users
+- User stories covered: 2, 7
+ 
+<details>
+    <summary>Instructions Screenshot</summary>
+
+![Instructions](images/features/screenshot_information.png)
+</details>
+
+### Top Currencies
+- Displays a list of top currencies
+- Allows user to find easily the most popular currencies
+- User stories covered: 1, 6
+  
+<details>
+    <summary>Top currencies Screenshot</summary>
+
+![Top currencies](images/features/screenshot_topcurrencies.png)
+</details>
+
+### Extra Currencies
+- Gives a big list of currencies coverd
+- User stories covered: 3
+
+<details>
+    <summary>Extra currancies Screenshot</summary>
+
+![Extra currencies](images/features/screenshot_extra.png)
+</details>
+
+### Result
+- Gives result in real time exchange rate
+- User stories covered: 4, 8
+
+<details>
+    <summary>Result Screenshot</summary>
+
+![Result](images/features/screenshot_result.png)
+</details>
+
+### User Input Validation
+- Displays an error message if user input is not in a form that was expected
+- Asks for a new input and provides guidance to user on how to correctly format the input
+- User stories covered: 5
+
+<details>
+    <summary>input validation Screenshot</summary>
+
+![Amount validation](images/input_validation/input_validation02.png)
+</details>
+
+<details>
+    <summary>Currency validation Screenshot</summary>
+
+![Currency validation](images/input_validation/input_validation01.png)
+</details>
+
+<details>
+    <summary>Conversion validation Screenshot</summary>
+
+![Conversion validation](images/input_validation/input_validation03.png)
+</details>
+
+[Back to Table Of Contents](#table-of-contents)
+
+## Validation
+
+[PEP8 Validation](https://pep8ci.herokuapp.com/) was used to check the code for PEP8 requirements. All the code passes with no errors and no warnings to show.
+
+<details><summary>PEP3 check for run.py</summary>
+<img src="images/validation/pep8.png">
+</details>
+
+## Testing
+
+The testing approach is as follows:
+1. Manual testing of user stories
+2. Automated unit testing using the Python unittest library
+
+### Manual Testing
+<details><summary>See user stories testing</summary>
+
+1. I want to have easy access to the top currencies
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Top Currencies | User can select or press 0 to pick an expecific one  | easy access | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="images/testing/testing_topcurrencies.png">
+</details>
+
+2. I want to be able to see the instructions
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Instructions | follow the steps | easy understandin fast navigation | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="images/testing/testing_instruction.png">
+</details>
+
+3. I want to have access to diffetent currencies
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Extra Currencies | We users press 0 they can choose a larger list of currencies  | easy access | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="images/testing/testing_extra.png">
+</details>
+
+4. I want to receive a real time quotation
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Result | follow instrction set an amount, initial currency and currency to exchange | it gives a real time result  | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="images/testing/testing_result.png">
+</details>
+
+5. I want users to have a positive experience
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Input Validation | Invalid data | Feedback message with instructions diplayed to the user  | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="images/testing/testing_input1.png">
+<img src="images/testing/testing_input2.png">
+<img src="images/testing/testing_input3.png">
+</details>

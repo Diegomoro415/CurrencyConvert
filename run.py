@@ -10,7 +10,6 @@ Author: Diego Moro
 
 Requirements:
     forex_python==1.6
-
 Usage:
     Run the script in a Python environment,
     and follow the prompts to convert currencies.
@@ -18,6 +17,7 @@ Usage:
 """
 # Import Library
 from forex_python.converter import CurrencyRates, CurrencyCodes
+import forex_python
 
 # Create instance of CurrencyRates class
 cr = CurrencyRates()
@@ -58,8 +58,8 @@ def label(txt):
 while True:
     # Instructions
     label('CURRENCY CONVERT')
-    label('1- INSERT THE DESIRED VALUE TO EXCHANGE\n 2- \
- INSERT THE INITIAL CURRENCY\n 3- INSERT THE EXCHANGE CURRENCY')
+    label('1- INSERT THE DESIRED VALUE TO EXCHANGE\n2- \
+INSERT THE INITIAL CURRENCY\n3- INSERT THE EXCHANGE CURRENCY')
     label('INSERT A VALUE')
     # Request user's input
     while True:
@@ -118,7 +118,11 @@ while True:
         except Exception:
             print(
                 "\033[31m Input not valid!.  Choose a valid value :(\33[0;0m")
-
+            # Check if user choose currencies are available
+            if currency_from not in currencies:
+                print('Invalid input. The available currencies are: ')
+                print(currencies)
+                continue
     # Select a currency to exchage value
     label('SELECT THE CONVERSION CURRENCY')
     currency_to = None
@@ -170,25 +174,23 @@ while True:
         except Exception:
             print(
                 "\033[31m Input not valid!. Try again :(\33[0;0m")
-            # Check if user choose currencies are available
-            if currency_from or currency_to not in currencies:
-                print('Invalid input. The available currencies are: ')
-                print(currencies)
-                continue
     # Conversion
     label('CONVERTING...')
-    # Get the exchange rate between currencies
-    result = cr.get_rate(currency_from, currency_to, amount)
-    # Get the exchange rate between currencies
-    exchange_rate = cr.get_rate(currency_from, currency_to)
     # Format the output
     symbol_from = cc.get_symbol(currency_from)
     symbol_to = cc.get_symbol(currency_to)
-    result = round(result, 2)
-    print(f'{currency_from}  -  {symbol_from} {amount} '
-          f' =========================== '
-          f' {currency_to}  -  {symbol_to} { result} '
-          f' Exchange rate: {exchange_rate:.4f})')
+    try:
+        # Get the exchange rate between currencies
+        result = cr.get_rate(currency_from, currency_to)
+        # Get the exchange rate between currencies
+        converted_amount = result * amount
+        print(f'{currency_from}  -  {symbol_from} {amount} '
+              f' =========================== '
+              f' {currency_to}  -  {symbol_to} { result} '
+              f' Exchange rate: {converted_amount:.4f})')
+    except forex_python.converter.RatesNotAvailableError:
+        print("\033[33m Conversion rates not\
+ available for the selected currencies.\33[0;0m")
     # Ask if user wants to perform another conversion
     answer = input('Do you wish to perform another time? (Y/N): ').upper
     if answer == 'N':
