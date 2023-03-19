@@ -19,6 +19,7 @@ Usage:
 from forex_python.converter import CurrencyRates, CurrencyCodes
 import forex_python
 import datetime
+import sys
 
 # Set the date
 date = datetime.date.today()
@@ -120,10 +121,12 @@ INSERT THE INITIAL CURRENCY\n3- INSERT THE EXCHANGE CURRENCY')
                 print('Currency Code :', currency_from)
         except Exception:
             print(
-                "\033[31m Input not valid!.  Choose a valid value :(\33[0;0m")
+              "\033[31m Input not valid!.  Choose a valid value :\33[0;0m \n")
             # Check if user choose currencies are available
             if currency_from not in currencies:
-                print('Invalid input. The available currencies are: ')
+                print(
+                 '\033[33mInvalid input.'
+                 'The available currencies are: \33[0;0m ')
                 print(currencies)
                 continue
     # Select a currency to exchage value
@@ -193,10 +196,10 @@ INSERT THE INITIAL CURRENCY\n3- INSERT THE EXCHANGE CURRENCY')
               f' Total: {converted_amount:.4f})')
     except forex_python.converter.RatesNotAvailableError:
         print("\033[33m Conversion rates not\
- available for the selected currencies.\33[0;0m")
+ available for the selected currencies\n33[0;0m")
     # Ask if user wants to perform another conversion
     answer = input(
-                '\033[33mWish to perform another time? (Y/N):\33[0;0m'
+                '\033[33m Press for new quotation\33[0;0m'
                 ).upper
     if answer == 'N':
-        quit()
+        sys.exit()
