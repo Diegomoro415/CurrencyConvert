@@ -196,7 +196,7 @@ INSERT THE INITIAL CURRENCY\n3- INSERT THE EXCHANGE CURRENCY')
               f' Total: {converted_amount:.4f})')
     except forex_python.converter.RatesNotAvailableError:
         print("\033[33m Conversion rates not\
- available for the selected currencies\n33[0;0m")
+ available for the selected currencies\33[0;0m")
     # Ask if user wants to perform another conversion
     answer = input(
                 '\033[33m Press for new quotation\33[0;0m'
