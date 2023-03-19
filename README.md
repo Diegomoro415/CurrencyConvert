@@ -23,8 +23,6 @@ currency and the exchange currency. It provides a list of currencies to choose f
   - [User Stories](#user-stories)
     - [Users](#users)
     - [Site Owner](#site-owner)
-  - [Technical Design](#technical-design)
-    - [Flowchart](#flowchart)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks & Tools](#frameworks--tools)
@@ -32,8 +30,6 @@ currency and the exchange currency. It provides a list of currencies to choose f
   - [Features](#features)
   - [Validation](#validation)
   - [Testing](#testing)
-    - [Manual Testing](#manual-testing)
-    - [Automated Testing](#automated-testing)
   - [Bugs](#bugs)
   - [Deployment](#deployment)
   - [Credits](#credits)
@@ -84,16 +80,6 @@ For those who wants to follow the prices find the best time to buy or sell your 
 6. I want users to easily select options from the menu
 7. I want users to see and follow the instruction for a easy navigation
 8. I want the user to receive a real time result
-
-                    ## Technical Design
-
-                    ### Flowchart
-
-                    The following flowchart summarises the structure and logic of the application.
-
-                    <details><summary>Flowchart</summary>
-                    <img src="docs/Connect4-flowchart.jpg">
-                    </details>
 
 ## Technologies Used
 
@@ -197,11 +183,6 @@ For those who wants to follow the prices find the best time to buy or sell your 
 
 ## Testing
 
-The testing approach is as follows:
-1. Manual testing of user stories
-2. Automated unit testing using the Python unittest library
-
-### Manual Testing
 <details><summary>See user stories testing</summary>
 
 1. I want to have easy access to the top currencies
@@ -285,3 +266,56 @@ The testing approach is as follows:
 <details><summary>Screenshot</summary>
 <img src="images/testing/testing_result.png">
 </details>
+
+[Back to Table Of Contents](#table-of-contents)
+## Bugs
+
+| **Bug** | **Fix** |
+| ------- | ------- |
+| When forex_python is down result do not work | Error message conversion rate not available |
+| When press N to quit  | Error message input invalid |
+
+## Deployment
+
+### Heroku
+This application has been deployed from GitHub to Heroku by following the steps:
+
+1. Create or log in to your account at heroku.com
+2. Make sure you have connected your GitHub account to heroku.com - follow the steps to Get Started and Sign up for Heroku. Click “New” and then select project name, and the region then you can link to your GitHub account, select if you want to deploy automatic (once you deploy on github it wil deploy automaticly on heroku), ensure to add buldpacks (heroku/python - heroku/nodejs)
+3. Set the Build Command:
+    ```
+    pip3 freeze > requirements.txt
+    ```
+
+### Forking the GitHub Repository
+
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+
+### Making a Local Clone
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it
+3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone <span>https://</span>github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone
+
+[Back to Table Of Contents](#table-of-contents)
+
+## Credits
+
+### Images
+- [Flaticon](https://www.flaticon.com/free-icon/exchange-rate_6342080?term=money+exchange&page=1&position=35&origin=search&related_id=6342080) was used for the website favicon
+
+### Code
+- [forex_python documentation](https://forex-python.readthedocs.io/en/latest/usage.html) Usage Examples
+- [forex_python GitHub](https://github.com/MicroPyramid/forex-python) Usage Examples
+- [Stack overflow](https://stackoverflow.com/questions/68896900/strange-currency-rates-source-not-ready-forex-python-error) helped me to find solution with errors
+
+## Acknowledgements
+I would like to thank everyone who supported me in the development of this project:
+- My mentor Mo for feedback and words of encouragement
+- My lovely wife for her support
+- Code Institute community on Slack for resources and support
