@@ -313,6 +313,7 @@ This application has been deployed from GitHub to Heroku by following the steps:
 - [forex_python documentation](https://forex-python.readthedocs.io/en/latest/usage.html) Usage Examples
 - [forex_python GitHub](https://github.com/MicroPyramid/forex-python) Usage Examples
 - [Stack overflow](https://stackoverflow.com/questions/68896900/strange-currency-rates-source-not-ready-forex-python-error) helped me to find solution with errors
+- Youtube video on [Python currecy converter](https://www.youtube.com/watch?v=VUrmKQOa3bM) Help to fix bug seting datetime
 
 ## Acknowledgements
 I would like to thank everyone who supported me in the development of this project:
